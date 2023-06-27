@@ -5,14 +5,14 @@ module "eks" {
   cluster_version                 = "1.24"
   cluster_endpoint_public_access  = true
 
-  create_cni_ipv6_iam_policy = true
+  #create_cni_ipv6_iam_policy = true
 
   vpc_id     = module.vpc.vpc_id
   subnet_ids = module.vpc.public_subnets
 
-  eks_managed_node_group_defaults = {
-    iam_role_attach_cni_policy = true
-  }
+  #eks_managed_node_group_defaults = {
+  #  iam_role_attach_cni_policy = true
+  #}
 
   eks_managed_node_groups = {
     alura = {
