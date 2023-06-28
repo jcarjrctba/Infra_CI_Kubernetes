@@ -4,6 +4,7 @@ module "eks" {
   cluster_name                    = var.cluster_name
   cluster_version                 = "1.24"
   cluster_endpoint_public_access  = true
+  cluster_endpoint_private_access  = true
 
   #create_cni_ipv6_iam_policy = true
 
